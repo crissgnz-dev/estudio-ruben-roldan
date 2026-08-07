@@ -132,7 +132,9 @@ export default function Navbar({ onOpenQuoteModal }) {
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-charcoal hover:bg-surface transition-colors"
+            className={`p-2 rounded-xl transition-colors ${
+              isScrolled ? 'text-charcoal hover:bg-surface' : 'text-white hover:bg-white/10'
+            }`}
             aria-label="Abrir menú"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

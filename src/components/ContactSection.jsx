@@ -95,17 +95,17 @@ export default function ContactSection() {
                 <MapPin className="w-7 h-7" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
-                Sede Avellaneda, AMBA
+                Sede Central, CABA
               </span>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-charcoal mb-1">Oficina Técnica</h3>
               <p className="text-base font-bold text-charcoal leading-snug mb-1">
-                Av. Hipólito Yrigoyen 1105
+                Carlos Pellegrini 173
               </p>
               <p className="text-sm text-on-surface-variant">
-                Avellaneda, Provincia de Buenos Aires (AMBA)
+                Microcentro, Ciudad Autónoma de Buenos Aires (CABA)
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export default function ContactSection() {
             </div>
 
             <a
-              href="https://maps.google.com/?q=Av.+Hipolito+Yrigoyen+1105,+Avellaneda,+Buenos+Aires"
+              href="https://maps.google.com/?q=Carlos+Pellegrini+173,+CABA,+Buenos+Aires"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-auto w-full py-3.5 px-4 violet-cta rounded-xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 text-center"
@@ -155,7 +155,7 @@ export default function ContactSection() {
             </div>
 
             <p className="text-on-surface-variant text-sm md:text-base leading-relaxed">
-              Oficina radicada en Avellaneda (Av. Hipólito Yrigoyen 1105), con atención técnica y gestoría de inspecciones en CABA.
+              Oficina radicada en Microcentro (Carlos Pellegrini 173), con atención técnica y gestoría de inspecciones en todo CABA.
             </p>
 
             <div className="p-4 rounded-2xl bg-surface border border-outline-variant/30 space-y-2 text-xs font-semibold text-charcoal">
@@ -170,22 +170,22 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Right Map Embed for Av. Hipólito Yrigoyen 1105, Avellaneda */}
+          {/* Right Map Embed for Carlos Pellegrini 173, CABA */}
           <div className="lg:col-span-7 h-80 lg:h-96 w-full relative">
             <iframe
-              title="Ubicación Av. Hipólito Yrigoyen 1105, Avellaneda"
+              title="Ubicación Carlos Pellegrini 173, CABA"
               width="100%"
               height="100%"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src="https://maps.google.com/maps?q=Av.%20Hipolito%20Yrigoyen%201105%2C%20Avellaneda%2C%20Buenos%20Aires&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Carlos%20Pellegrini%20173%2C%20CABA%2C%20Buenos%20Aires&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full border-0"
             />
             <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-primary/20 text-xs font-bold text-charcoal flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary animate-bounce" />
-              <span>Av. Hipólito Yrigoyen 1105, Avellaneda</span>
+              <span>Carlos Pellegrini 173, CABA</span>
             </div>
           </div>
 

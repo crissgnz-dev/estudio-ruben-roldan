@@ -22,8 +22,8 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
     {
       type: 'about',
       badge: '🏛️ Estudio Rubén Roldán',
-      title: 'Más de 50 años en ingeniería e inspección técnica',
-      description: 'Oficina técnica radicada en Avellaneda. Habilitaciones municipales, gas matriculado, protocolos SRT y mantenimiento. Jurisdicción en CABA.',
+      title: 'Más de 45 años en ingeniería e inspección técnica',
+      description: 'Oficina técnica radicada en Microcentro. Habilitaciones municipales, obras, instalaciones y mantenimiento. Jurisdicción en CABA.',
       items: ['Mat. COPIME 9551', 'Metrogas 1° Cat. 19588'],
       bg: null,
     },
@@ -34,8 +34,8 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
       icon: Wrench,
       badge: 'Metrogas 1° Cat. 19588',
       title: 'Obras e Instalaciones',
-      description: 'Gas natural en industrias y domicilios, instalaciones eléctricas, electromecánicas, ventilación mecánica, incendio, plomería, remodelaciones y obra seca.',
-      items: ['Gas natural: norma NAG-200 / Metrogas 19588', 'Instalaciones eléctricas industriales y domiciliarias', 'Ventilación, incendio, plomería y Durlock'],
+      description: 'Mantenimiento de edificios, gas natural en industrias y domicilios, instalaciones eléctricas, ventilación, incendio y plomería.',
+      items: ['Mantenimiento de edificios', 'Gas natural: norma NAG-200 / Metrogas 19588', 'Instalaciones eléctricas y sanitarias'],
       bg: 'https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?q=80&w=1920&auto=format&fit=crop',
     },
     {
@@ -43,10 +43,10 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
       id: 'mantenimiento',
       category: 'mantenimiento',
       icon: ShieldCheck,
-      badge: 'Protocolos SRT / COPIME',
+      badge: 'Ingeniería / COPIME',
       title: 'Mantenimiento de Instalaciones',
-      description: 'Mantenimiento preventivo y certificación de calderas, ascensores, equipos de A/C y protocolos de medición reglamentarios para industria y propiedad horizontal.',
-      items: ['Calderas: pruebas hidráulicas y certificación', 'Protocolo de puesta a tierra con jabalina', 'Medición de iluminación (Luxes) — Res. SRT 84/12'],
+      description: 'Mantenimiento preventivo y certificación de calderas, ascensores y equipos de A/C para industria y propiedad horizontal.',
+      items: ['Ascensores y equipos de A/C', 'Calderas: pruebas hidráulicas y certificación', 'Mantenimiento preventivo general'],
       bg: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1920&auto=format&fit=crop',
     },
     {
@@ -155,8 +155,8 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
 
       {/* ── Slide Content ── */}
       <div
-        className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-12"
-        style={{ zIndex: 10, paddingTop: 'calc(72px + 3rem)', paddingBottom: '5rem' }}
+        className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 sm:px-6 md:px-12"
+        style={{ zIndex: 10, paddingTop: 'calc(72px + 2rem)', paddingBottom: '4rem' }}
       >
         <div
           className="w-full max-w-4xl mx-auto transition-all duration-400"
@@ -176,14 +176,14 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
 
           {/* Title */}
           {slide.type === 'about' ? (
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-5">
-              Más de 50 años liderando la{' '}
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-5">
+              Más de 45 años liderando la{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400">
                 ingeniería e inspección técnica
               </span>
             </h1>
           ) : (
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-5">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-5">
               {slide.title}
             </h2>
           )}
@@ -205,40 +205,40 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
 
           {/* CTA Buttons */}
           {slide.type === 'about' ? (
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-4 w-full px-4 sm:px-0">
               <a
                 href="#sobre-nosotros"
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/25 px-7 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 backdrop-blur-sm transition-all"
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/25 px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 backdrop-blur-sm transition-all"
               >
-                <Building2 className="w-5 h-5" />
+                <Building2 className="w-5 h-5 shrink-0" />
                 <span>Conocer Nuestra Historia</span>
               </a>
               <a
                 href="https://wa.me/541154090082"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#1fba59] text-white px-7 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 shadow-lg transition-colors"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 shadow-lg transition-colors"
               >
-                <WhatsAppIcon className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5 shrink-0" />
                 <span>Consultar por WhatsApp</span>
               </a>
             </div>
           ) : (
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-4 w-full px-4 sm:px-0">
               <button
                 onClick={() => onSelectService && onSelectService(slide)}
-                className="bg-primary hover:bg-primary-dark text-white px-7 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center gap-2.5 transition-colors shadow-lg"
+                className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 transition-colors shadow-lg"
               >
                 <span>Ver Explicación Completa</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
               <a
                 href={`https://wa.me/541154090082?text=${encodeURIComponent(`Hola Ing. Rubén Roldán, quisiera consultar sobre el servicio: ${slide.title}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#1fba59] text-white px-7 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center gap-2.5 transition-colors shadow-lg"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 transition-colors shadow-lg"
               >
-                <WhatsAppIcon className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5 shrink-0" />
                 <span>Consultar por WhatsApp</span>
               </a>
             </div>

@@ -43,7 +43,7 @@ export default function ServicesBento({ onSelectService }) {
         'Habilitaciones comerciales e industriales',
         'Térmicas, incendio y electromecánicas',
         'Ascensores, montacargas y grupos electrógenos',
-        'Instalaciones eléctricas y evacuación'
+        'Certificación de calderas, termotanques y obleas'
       ]
     }
   ];

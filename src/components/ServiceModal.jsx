@@ -69,6 +69,7 @@ export default function ServiceModal({ isOpen, onClose, selectedService }) {
       normative: 'Regulado por AGC (Agencia Gubernamental de Control), Código de Edificación Ley 6100 y normativas municipales vigentes.',
       scope: [
         'Habilitaciones térmicas de calderas y termotanques.',
+        'Certificación de calderas y termotanques junto a sus obleas.',
         'Habilitación de instalaciones de incendio y evacuación.',
         'Habilitaciones electromecánicas e instalaciones eléctricas.',
         'Habilitación de ascensores, montacargas y montaplatos.',

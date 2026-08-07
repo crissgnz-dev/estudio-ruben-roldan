@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Factory, CheckCircle2, MapPin, Award } from 'lucide-react';
+import { Building2, Factory, Store, CheckCircle2, MapPin, Award } from 'lucide-react';
 
 export default function AboutUs() {
   return (
@@ -29,7 +29,7 @@ export default function AboutUs() {
               {/* Stats Grid */}
               <div className="relative z-10 grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                  <span className="text-white font-extrabold text-3xl md:text-4xl leading-none">50+</span>
+                  <span className="text-white font-extrabold text-3xl md:text-4xl leading-none">45+</span>
                   <p className="text-purple-200 text-xs font-semibold mt-1 leading-tight">Años de Trayectoria</p>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
@@ -48,7 +48,7 @@ export default function AboutUs() {
 
               {/* Specializations tags */}
               <div className="relative z-10 flex flex-wrap gap-2">
-                {['Habilitaciones', 'Gas Matriculado', 'Calderas', 'Termotanques', 'Protocolo SRT'].map((tag) => (
+                {['Habilitaciones', 'Gas Matriculado', 'Calderas', 'Termotanques', 'Obras', 'Mantenimiento de edificios'].map((tag) => (
                   <span key={tag} className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20">
                     {tag}
                   </span>
@@ -71,22 +71,22 @@ export default function AboutUs() {
 
             <div className="space-y-3 text-on-surface-variant text-base md:text-lg leading-relaxed mb-6">
               <p>
-                Bajo la dirección del <strong>Ingeniero Rubén Roldán</strong>, brindamos gestión integral en habilitaciones, obras matriculadas y certificaciones.
+                Con más de 45 años de trayectoria, nuestro estudio realiza la gestión técnica e integral de proyectos. Nos especializamos en habilitación en obras matriculares, obras municipales y certificación en calderas y termotanques.
               </p>
               <p>
-                Garantizamos rigor técnico y acompañamiento directo a consorcios e industrias en sus adecuaciones reglamentarias.
+                Garantizamos rigor técnico y acompañamiento directo a consorcios, industrias y comercios en sus adecuaciones reglamentarias.
               </p>
             </div>
 
             {/* Specialization Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 hover:shadow-md transition-all group">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                   <Building2 className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-lg text-charcoal mb-1">Propiedad Horizontal</h3>
                 <p className="text-sm text-on-surface-variant leading-normal">
-                  Gestión integral y certificaciones de seguridad para consorcios, edificios residenciales y administraciones.
+                  Gestión integral, certificaciones, servicios de mantenimiento de edificios, trabajos de plomería, electricidad y aire acondicionado.
                 </p>
               </div>
 
@@ -94,9 +94,19 @@ export default function AboutUs() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                   <Factory className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-lg text-charcoal mb-1">Industria y Comercio</h3>
+                <h3 className="font-bold text-lg text-charcoal mb-1">Industria</h3>
                 <p className="text-sm text-on-surface-variant leading-normal">
-                  Habilitaciones industriales, adecuaciones de gas de alta presión, tableros eléctricos y protocolos de seguridad laboral.
+                  Certificaciones y obtención de QR en instalaciones ante el GCBA, trámites ante Metrogas y habilitaciones municipales integrales.
+                </p>
+              </div>
+
+              <div className="p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 hover:shadow-md transition-all group">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Store className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-lg text-charcoal mb-1">Comercio</h3>
+                <p className="text-sm text-on-surface-variant leading-normal">
+                  Habilitación comercial y obtención de QR, obras y habilitaciones de instalaciones, y trámites ante Metrogas.
                 </p>
               </div>
             </div>
