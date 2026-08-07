@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-3">
-          <p>© {new Date().getFullYear()} Estudio Rubén Roldán · Av. Hipólito Yrigoyen 1105, Avellaneda (AMBA)</p>
+          <p>© {new Date().getFullYear()} Estudio Rubén Roldán · Carlos Pellegrini 173, CABA</p>
           <div className="flex gap-6">
             <a href="#inicio" className="hover:underline">Aviso Legal</a>
             <a href="#inicio" className="hover:underline">Política de Privacidad</a>
