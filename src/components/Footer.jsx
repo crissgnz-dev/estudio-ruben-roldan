@@ -85,7 +85,7 @@ function LegalModal({ isOpen, onClose, type }) {
         {
           icon: FileText,
           heading: 'Cambios a esta Política',
-          text: 'El Estudio Rubén Roldán se reserva el derecho de actualizar esta política en cualquier momento. La versión vigente estará siempre disponible en este sitio. La última actualización corresponde al año 2025.'
+          text: 'El Estudio Rubén Roldán se reserva el derecho de actualizar esta política en cualquier momento. La versión vigente estará siempre disponible en este sitio. La última actualización corresponde al año 2026.'
         }
       ]
     }

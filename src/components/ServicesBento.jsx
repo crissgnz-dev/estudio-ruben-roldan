@@ -27,7 +27,7 @@ export default function ServicesBento({ onSelectService }) {
       title: 'MANTENIMIENTO DE INSTALACIONES',
       items: [
         'Calderas: pruebas hidráulicas y certificación',
-        'Ascensores, montacargas y equipos de A/C',
+        'Ascensores, montacargas y equipos de aire acondicionado',
         'Protocolo de continuidad a tierra (jabalina)',
         'Medición de iluminación (Luxes)'
       ]
@@ -67,35 +67,35 @@ export default function ServicesBento({ onSelectService }) {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.id}
                 onClick={() => onSelectService(service)}
-                className="bento-card p-8 bg-white border border-outline-variant/40 rounded-3xl shadow-sm flex flex-col justify-between group cursor-pointer hover:shadow-xl transition-all"
+                className="bento-card p-6 sm:p-8 bg-white border border-outline-variant/40 rounded-3xl shadow-sm flex flex-col justify-between group cursor-pointer hover:shadow-xl active:scale-[0.98] transition-all"
               >
                 <div>
                   {/* Icon & Badge Header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      <Icon className="w-7 h-7" />
+                  <div className="flex items-center justify-between mb-5 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                       {service.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-charcoal mb-3 sm:mb-4 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
 
                   {/* Bullet points */}
-                  <ul className="space-y-3 text-on-surface-variant mb-8 text-sm md:text-base">
+                  <ul className="space-y-2.5 sm:space-y-3 text-on-surface-variant mb-6 sm:mb-8 text-sm md:text-base">
                     {service.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start gap-2.5 sm:gap-3">
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -106,7 +106,7 @@ export default function ServicesBento({ onSelectService }) {
                 <div className="inline-flex items-center justify-between w-full pt-4 border-t border-outline-variant/20 text-primary font-bold text-sm md:text-base group-hover:text-primary-container">
                   <span className="flex items-center gap-1.5">
                     <Info className="w-4 h-4" />
-                    Ver Explicación y Cotización
+                    Ver Explicación
                   </span>
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                     <ArrowRight className="w-4 h-4" />

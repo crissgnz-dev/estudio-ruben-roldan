@@ -26,35 +26,35 @@ export default function ContactSection() {
             Canales de Contacto Directo
           </h2>
           <p className="text-on-surface-variant text-base md:text-lg mt-4 leading-relaxed">
-            Comuníquese directamente con la oficina del <strong>Ingeniero Rubén Roldán</strong> para asesoría técnica, inspecciones y gestoría. Jurisdicción en CABA.
+            Comuníquese directamente para atención técnica, inspecciones y gestoría. Jurisdicción en CABA.
           </p>
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto items-stretch">
           
           {/* Card 1: WhatsApp + Phone with reveal toggle */}
-          <div className="bg-white p-8 md:p-10 rounded-3xl border border-outline-variant/30 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all flex flex-col gap-6 group">
+          <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-outline-variant/30 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all flex flex-col gap-5 sm:gap-6 group">
             <div className="flex items-center justify-between">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Smartphone className="w-7 h-7" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Smartphone className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                 Contacto Directo
               </span>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-charcoal mb-1">Ing. Rubén Roldán</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-1">Contacto Directo</h3>
+              <p className="text-on-surface-variant text-xs sm:text-sm leading-relaxed">
                 Atención para la gestión de expedientes, presupuestos, planos y consultas técnicas de obra.
               </p>
             </div>
 
             {/* Phone with reveal toggle */}
-            <div className="p-4 rounded-2xl bg-surface border border-outline-variant/20">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-surface border border-outline-variant/20">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Celular / WhatsApp:</span>
+                <span className="text-[11px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Celular / WhatsApp:</span>
                 <button
                   onClick={() => setShowPhone(!showPhone)}
                   className="text-primary hover:underline flex items-center gap-1 font-semibold text-xs"
@@ -63,7 +63,7 @@ export default function ContactSection() {
                   <span>{showPhone ? 'Ocultar' : 'Ver Número'}</span>
                 </button>
               </div>
-              <p className="text-2xl md:text-3xl font-extrabold text-charcoal tracking-tight font-mono">
+              <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-charcoal tracking-tight font-mono">
                 {showPhone ? '11 5409-0082' : '11 5409-••••'}
               </p>
             </div>
@@ -73,14 +73,14 @@ export default function ContactSection() {
                 href="https://wa.me/541154090082"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1fba59] text-white rounded-xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm text-center"
+                className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1fba59] active:scale-98 text-white rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-sm text-center"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 <span>WhatsApp</span>
               </a>
               <a
                 href="tel:1154090082"
-                className="w-full py-3.5 px-4 purple-outline-cta rounded-xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 text-center"
+                className="w-full py-3.5 px-4 purple-outline-cta active:scale-98 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 text-center transition-all"
               >
                 <Phone className="w-4 h-4" />
                 <span>Llamar</span>
@@ -88,28 +88,28 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Card 2: Office Address in Avellaneda */}
-          <div className="bg-white p-8 md:p-10 rounded-3xl border border-outline-variant/30 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all flex flex-col gap-6 group">
+          {/* Card 2: Office Address in CABA */}
+          <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-outline-variant/30 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all flex flex-col gap-5 sm:gap-6 group">
             <div className="flex items-center justify-between">
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MapPin className="w-7 h-7" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                 Sede Central, CABA
               </span>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-charcoal mb-1">Oficina Técnica</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-charcoal mb-1">Oficina Técnica</h3>
               <p className="text-base font-bold text-charcoal leading-snug mb-1">
                 Carlos Pellegrini 173
               </p>
-              <p className="text-sm text-on-surface-variant">
+              <p className="text-xs sm:text-sm text-on-surface-variant">
                 Microcentro, Ciudad Autónoma de Buenos Aires (CABA)
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-surface border border-outline-variant/20 space-y-2 text-sm text-charcoal">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-surface border border-outline-variant/20 space-y-2 text-xs sm:text-sm text-charcoal">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
                 <span className="font-semibold">Mat. COPIME 9551</span>
@@ -128,7 +128,7 @@ export default function ContactSection() {
               href="https://maps.google.com/?q=Carlos+Pellegrini+173,+CABA,+Buenos+Aires"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto w-full py-3.5 px-4 violet-cta rounded-xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 text-center"
+              className="mt-auto w-full py-3.5 px-4 violet-cta active:scale-98 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 text-center transition-all"
             >
               <MapPin className="w-4 h-4" />
               <span>Ver en Google Maps</span>
@@ -141,7 +141,7 @@ export default function ContactSection() {
         <div className="bg-white rounded-3xl border border-outline-variant/30 overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 items-center">
           
           {/* Left Info Banner */}
-          <div className="lg:col-span-5 p-8 md:p-10 space-y-6">
+          <div className="lg:col-span-5 p-6 sm:p-8 md:p-10 space-y-5 sm:space-y-6">
             <div className="flex items-center gap-4">
               <img 
                 src={logoImg} 
