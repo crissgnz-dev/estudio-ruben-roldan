@@ -124,15 +124,15 @@ export default function Navbar({ onOpenQuoteModal }) {
             href="https://wa.me/541154090082"
             target="_blank"
             rel="noopener noreferrer"
-            className={`p-2 rounded-xl transition-colors ${
-              isScrolled ? 'bg-[#25D366] text-white' : 'bg-white/15 text-white border border-white/25 backdrop-blur-sm'
+            className={`p-2 rounded-xl transition-all active:scale-95 ${
+              isScrolled ? 'bg-[#25D366] text-white shadow-xs' : 'bg-white/15 text-white border border-white/25 backdrop-blur-sm'
             }`}
           >
             <WhatsAppIcon className="w-5 h-5" />
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`p-2 rounded-xl transition-colors ${
+            className={`p-2 rounded-xl transition-all active:scale-95 ${
               isScrolled ? 'text-charcoal hover:bg-surface' : 'text-white hover:bg-white/10'
             }`}
             aria-label="Abrir menú"
@@ -142,32 +142,50 @@ export default function Navbar({ onOpenQuoteModal }) {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown con Glassmorphism dinámico (oscuro en hero / claro al hacer scroll) */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-outline-variant/20 px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-200">
-          <div className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`py-2 px-3 rounded-xl text-base font-medium transition-colors ${
-                  activeSection === link.id
-                    ? 'bg-primary/10 text-primary font-bold'
-                    : 'text-on-surface-variant hover:bg-surface'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+        <div className={`md:hidden px-6 py-6 space-y-4 shadow-2xl animate-in slide-in-from-top duration-300 backdrop-blur-2xl border-b transition-colors ${
+          isScrolled
+            ? 'bg-white/90 border-outline-variant/30 text-charcoal'
+            : 'bg-slate-900/90 border-white/15 text-white shadow-[0_20px_50px_rgba(0,0,0,0.5)]'
+        }`}>
+          <div className="flex flex-col space-y-2">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.id;
+              return (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-3 px-4 rounded-2xl text-base font-semibold transition-all active:scale-98 flex items-center justify-between ${
+                    isScrolled
+                      ? isActive
+                        ? 'bg-primary/10 text-primary font-bold border border-primary/30 backdrop-blur-md shadow-xs'
+                        : 'text-on-surface-variant hover:text-primary hover:bg-surface'
+                      : isActive
+                        ? 'bg-purple-600/30 text-white font-bold border border-purple-400/40 backdrop-blur-md shadow-inner'
+                        : 'text-slate-200 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {isActive && (
+                    <span className={`w-2 h-2 rounded-full animate-pulse ${
+                      isScrolled ? 'bg-primary' : 'bg-purple-400'
+                    }`} />
+                  )}
+                </a>
+              );
+            })}
           </div>
 
-          <div className="pt-4 border-t border-outline-variant/20">
+          <div className={`pt-4 border-t transition-colors ${
+            isScrolled ? 'border-outline-variant/20' : 'border-white/10'
+          }`}>
             <a
               href="https://wa.me/541154090082"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 bg-[#25D366] text-white rounded-xl font-bold text-center flex items-center justify-center gap-2 hover:bg-[#1fba59] transition-colors"
+              className="w-full py-3.5 bg-[#25D366] hover:bg-[#1fba59] active:scale-98 text-white rounded-2xl font-bold text-center flex items-center justify-center gap-2 transition-all shadow-lg text-sm uppercase tracking-wider border border-emerald-400/30"
             >
               <WhatsAppIcon className="w-5 h-5" />
               WhatsApp Directo

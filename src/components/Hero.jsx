@@ -23,7 +23,7 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
       type: 'about',
       badge: '🏛️ Estudio Rubén Roldán',
       title: 'Más de 45 años en ingeniería e inspección técnica',
-      description: 'Oficina técnica radicada en Microcentro. Habilitaciones municipales, obras, instalaciones y mantenimiento. Jurisdicción en CABA.',
+      description: 'Oficina técnica radicada en Microcentro. Habilitaciones municipales (térmicas, ventilación mecánica y electromecánicas), obras, instalaciones y mantenimiento. Jurisdicción en CABA.',
       items: ['Mat. COPIME 9551', 'Metrogas 1° Cat. 19588'],
       bg: null,
     },
@@ -45,8 +45,8 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
       icon: ShieldCheck,
       badge: 'Ingeniería / COPIME',
       title: 'Mantenimiento de Instalaciones',
-      description: 'Mantenimiento preventivo y certificación de calderas, ascensores y equipos de A/C para industria y propiedad horizontal.',
-      items: ['Ascensores y equipos de A/C', 'Calderas: pruebas hidráulicas y certificación', 'Mantenimiento preventivo general'],
+      description: 'Mantenimiento preventivo y certificación de calderas, ascensores y equipos de aire acondicionado para industria y propiedad horizontal.',
+      items: ['Ascensores y equipos de aire acondicionado', 'Calderas: pruebas hidráulicas y certificación', 'Mantenimiento preventivo general'],
       bg: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1920&auto=format&fit=crop',
     },
     {
@@ -156,10 +156,10 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
       {/* ── Slide Content ── */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 sm:px-6 md:px-12"
-        style={{ zIndex: 10, paddingTop: 'calc(72px + 2rem)', paddingBottom: '4rem' }}
+        style={{ zIndex: 10, paddingTop: 'calc(72px + 1.5rem)', paddingBottom: '3.5rem' }}
       >
         <div
-          className="w-full max-w-4xl mx-auto transition-all duration-400"
+          className="w-full max-w-3xl mx-auto transition-all duration-400"
           style={{
             opacity: isAnimating ? 0 : 1,
             transform: isAnimating
@@ -168,36 +168,36 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
           }}
         >
           {/* Badge */}
-          <div className="mb-5">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-purple-200 font-semibold text-xs md:text-sm border border-white/20 backdrop-blur-sm">
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-purple-200 font-semibold text-xs md:text-sm border border-white/20 backdrop-blur-sm">
               {slide.badge}
             </span>
           </div>
 
           {/* Title */}
           {slide.type === 'about' ? (
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-5">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-4">
               Más de 45 años liderando la{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400">
                 ingeniería e inspección técnica
               </span>
             </h1>
           ) : (
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] mb-4">
               {slide.title}
             </h2>
           )}
 
           {/* Description */}
-          <p className="text-base md:text-lg text-slate-200/90 mb-7 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-slate-200/90 mb-5 max-w-xl mx-auto leading-relaxed">
             {slide.description}
           </p>
 
           {/* Feature chips */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-9">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
             {slide.items.map((item, i) => (
-              <div key={i} className="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-xl border border-white/20 text-xs md:text-sm font-semibold text-white backdrop-blur-sm">
-                <CheckCircle2 className="w-4 h-4 text-violet-300 shrink-0" />
+              <div key={i} className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-xl border border-white/20 text-xs md:text-sm font-semibold text-white backdrop-blur-sm">
+                <CheckCircle2 className="w-3.5 h-3.5 text-violet-300 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -205,40 +205,40 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
 
           {/* CTA Buttons */}
           {slide.type === 'about' ? (
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-4 w-full px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 md:gap-4 w-full px-4 sm:px-0">
               <a
                 href="#sobre-nosotros"
-                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/25 px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 backdrop-blur-sm transition-all"
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/25 px-5 py-2.5 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 backdrop-blur-sm transition-all"
               >
-                <Building2 className="w-5 h-5 shrink-0" />
+                <Building2 className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 <span>Conocer Nuestra Historia</span>
               </a>
               <a
                 href="https://wa.me/541154090082"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 shadow-lg transition-colors"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-5 py-2.5 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-lg transition-colors"
               >
-                <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 <span>Consultar por WhatsApp</span>
               </a>
             </div>
           ) : (
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-4 w-full px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 md:gap-4 w-full px-4 sm:px-0">
               <button
                 onClick={() => onSelectService && onSelectService(slide)}
-                className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 transition-colors shadow-lg"
+                className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-2.5 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 transition-colors shadow-lg"
               >
-                <span>Ver Explicación Completa</span>
-                <ArrowRight className="w-5 h-5 shrink-0" />
+                <span>Ver Explicación</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
               </button>
               <a
-                href={`https://wa.me/541154090082?text=${encodeURIComponent(`Hola Ing. Rubén Roldán, quisiera consultar sobre el servicio: ${slide.title}`)}`}
+                href={`https://wa.me/541154090082?text=${encodeURIComponent(`Hola, quisiera consultar sobre el servicio: ${slide.title}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-6 py-3.5 rounded-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2.5 transition-colors shadow-lg"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1fba59] text-white px-5 py-2.5 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 transition-colors shadow-lg"
               >
-                <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 <span>Consultar por WhatsApp</span>
               </a>
             </div>
@@ -246,26 +246,26 @@ export default function Hero({ onOpenQuoteModal, onSelectService }) {
         </div>
       </div>
 
-      {/* ── Arrow: Left ── */}
+      {/* ── Arrow: Left (solo visible en desktop para no tapar texto en mobile) ── */}
       <button
         onClick={handlePrev}
         aria-label="Diapositiva anterior"
-        className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-13 md:h-13 rounded-full bg-white/10 hover:bg-white/25 border border-white/20 flex items-center justify-center text-white backdrop-blur-sm transition-all active:scale-90"
+        className="hidden md:flex absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-13 md:h-13 rounded-full bg-white/10 hover:bg-white/25 border border-white/20 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-90"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
 
-      {/* ── Arrow: Right ── */}
+      {/* ── Arrow: Right (solo visible en desktop para no tapar texto en mobile) ── */}
       <button
         onClick={handleNext}
         aria-label="Diapositiva siguiente"
-        className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-13 md:h-13 rounded-full bg-white/10 hover:bg-white/25 border border-white/20 flex items-center justify-center text-white backdrop-blur-sm transition-all active:scale-90"
+        className="hidden md:flex absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-13 md:h-13 rounded-full bg-white/10 hover:bg-white/25 border border-white/20 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-90"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
       {/* ── Dot indicators con progreso integrado ── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+      <div className="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
         {slides.map((_, i) => (
           <button
             key={i}

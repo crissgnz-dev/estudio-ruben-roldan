@@ -86,13 +86,13 @@ export default function ServiceModal({ isOpen, onClose, selectedService }) {
   const IconComponent = detail.icon;
 
   const whatsappMessage = encodeURIComponent(
-    `Hola Ing. Rubén Roldán, quisiera solicitar asesoramiento y presupuesto sobre el servicio: ${detail.title}`
+    `Hola, quisiera solicitar asesoramiento sobre el servicio: ${detail.title}`
   );
 
   return (
     // Overlay: click outside the white card to close
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/70 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl animate-in fade-in duration-200 overflow-y-auto"
       onClick={onClose}
     >
       {/* Stop propagation so clicking inside the card doesn't close the modal */}
@@ -153,16 +153,6 @@ export default function ServiceModal({ isOpen, onClose, selectedService }) {
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Deliverables */}
-        <div className="p-4 rounded-xl bg-surface border border-outline-variant/30 mb-8">
-          <span className="block text-xs font-bold uppercase tracking-wider text-charcoal mb-1">
-            📄 Documentación Entregada:
-          </span>
-          <p className="text-xs md:text-sm text-on-surface-variant font-medium">
-            {detail.deliverables}
-          </p>
         </div>
 
         {/* Action Buttons */}
