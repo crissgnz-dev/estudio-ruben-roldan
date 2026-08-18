@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estudiorubenroldan.com.ar/sitemap.xml
